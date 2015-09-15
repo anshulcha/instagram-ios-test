@@ -24,7 +24,7 @@
     [super viewDidLoad];
     UINib *nib = [UINib nibWithNibName:@"PhotoCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"com.yahoo.cell"];
-    NSURL *url = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=d8297298a6bd46f2bd627d0753e25de8"];
+    NSURL *url = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=9e521767ce8c43cfb386e30608eb5f75"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         _instagramPopularData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil][@"data"];
